@@ -1,7 +1,7 @@
 flutter_native_splash:
   color: "#FFFFFF"
   #color_dark: "#272727"
-  image: "assets/logos/arraz2.png"
+  image: "assets/logos/pregnant-woman-animated-cartoon-illustration-vector.jpg"
   #image_dark: "assets/logos/arraz2.png"
 
   android: true
@@ -9,7 +9,7 @@ flutter_native_splash:
   android_12:
     color: "#FFFFFF"
     #color_dark: "#272727"
-    image: "assets/logos/arraz2.png"
+    image: "assets/logos/pregnant-woman-animated-cartoon-illustration-vector.jpg"
     #image_dark: "assets/logos/arraz2.png"
 
   web: false
