@@ -26,6 +26,7 @@ class TSize{
   static const double buttonElevation = 4.0;
 
   //Appbar size
+  static const double AppbarHeight= 56.0;
   static const double imageThumbSize = 80.0;
 
   //default spacing between section
