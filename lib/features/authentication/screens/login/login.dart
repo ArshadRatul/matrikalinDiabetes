@@ -3,9 +3,11 @@ import "package:app/utils/constants/images_string.dart";
 import "package:app/utils/constants/text.dart";
 import "package:app/utils/helpers/helper.dart";
 import "package:flutter/material.dart";
+import "package:get/get_navigation/src/root/get_material_app.dart";
 import "package:iconsax/iconsax.dart";
 
 import "../../../../utils/constants/size.dart";
+import "../signup/signup.dart";
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -14,6 +16,9 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: AppBar(
+        title: Text('Login Page'),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: TSpacingStyle.paddingAppbarHeight,
@@ -64,6 +69,7 @@ class LoginScreen extends StatelessWidget {
                         ///_password = value!;
                       },
                     ),
+
                     SizedBox(height: TSize.sm),
 
                     Row(
@@ -81,7 +87,13 @@ class LoginScreen extends StatelessWidget {
                       children: [
                         ElevatedButton(onPressed: (){}, child: Text("Login")),
                         SizedBox(width: TSize.spaceBtwItems),
-                        OutlinedButton(onPressed: (){}, child: Text("Signup")),
+                        OutlinedButton(onPressed: ()
+                        {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => SignupPage())
+                          );
+                        }, child: Text("Signup")),
                       ],
                     ),
 
