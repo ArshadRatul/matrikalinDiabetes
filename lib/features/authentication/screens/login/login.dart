@@ -1,4 +1,5 @@
 import "package:app/common/styles/commonSpace.dart";
+import "package:app/features/authentication/screens/homepage/home.dart";
 import "package:app/utils/constants/images_string.dart";
 import "package:app/utils/constants/text.dart";
 import "package:app/utils/helpers/helper.dart";
@@ -74,9 +75,9 @@ class LoginScreen extends StatelessWidget {
 
                     Row(
                       children: [
-                        Checkbox(value: true, onChanged: (value){}),
+                        Checkbox(value: true, onChanged: (value){}), ///Remember me checkbox
                         Text("Remember me"),
-                        TextButton(onPressed: (){}, child: Text("Forget password")),
+                        TextButton(onPressed: (){}, child: Text("Forget password")), ///Forget password button
 
                       ],
                     ),
@@ -85,8 +86,18 @@ class LoginScreen extends StatelessWidget {
                     
                     Row(
                       children: [
-                        ElevatedButton(onPressed: (){}, child: Text("Login")),
+                        ///Login Button
+                        ElevatedButton(onPressed: (){
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(builder: (context) =>HomePage())
+                              );
+
+                        }, child: Text("Login")),
+
                         SizedBox(width: TSize.spaceBtwItems),
+
+                        ///Signupbutton
                         OutlinedButton(onPressed: ()
                         {
                           Navigator.push(
