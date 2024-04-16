@@ -1,109 +1,41 @@
+import 'package:app/utils/helpers/helper.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/wigets/appbar.dart';
+import '../../../../utils/constants/colors.dart';
+import 'circleData.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: Appbar(),
-      body: Column(
+      body:
+      Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // First Part
-          Expanded(
+          ///Part 1
+          Padding(
+            padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CircleWidget(label: 'Circle 1', color: Colors.red),
-                CircleWidget(label: 'Circle 2', color: Colors.green),
-                CircleWidget(label: 'Circle 3', color: Colors.blue),
-                CircleWidget(label: 'Circle 4', color: Colors.orange),
+                CircleData(label:'রক্তের শর্করার লেভেল', value1: '৫.৫', value2: 'mg/dL',),
+                CircleData(label: 'ক্যালোরি খেয়েছেন',value1: '৫০০', value2: 'ক্যাল',),
+                CircleData(label: 'পানি খেয়েছেন',value1: '৪', value2: 'গ্লাস',),
+                CircleData(label: 'ওষুধ     বাকি',value1: '২', value2: 'টি',)
               ],
             ),
-          ),
-          // Second Part
-          Container(
-            height: 100,
-            color: Colors.blue,
-            alignment: Alignment.center,
-            child: Text('Blue Color Box', style: TextStyle(color: Colors.white, fontSize: 20)),
-          ),
-          // Third Part
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CircularButton(label: 'Button 1', color: Colors.red),
-                      CircularButton(label: 'Button 2', color: Colors.green),
-                      CircularButton(label: 'Button 3', color: Colors.blue),
-                      CircularButton(label: 'Button 4', color: Colors.orange),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CircularButton(label: 'Button 5', color: Colors.purple),
-                      CircularButton(label: 'Button 6', color: Colors.yellow),
-                      CircularButton(label: 'Button 7', color: Colors.teal),
-                      CircularButton(label: 'Button 8', color: Colors.pink),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
+          )
+
+          ///Part 2
+
+
+          ///Part 3
         ],
       ),
     );
   }
 }
 
-class CircleWidget extends StatelessWidget {
-  final String label;
-  final Color color;
-
-  CircleWidget({required this.label, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 40,
-          backgroundColor: color,
-          child: Icon(Icons.circle, size: 40, color: Colors.white),
-        ),
-        SizedBox(height: 10),
-        Text(label),
-      ],
-    );
-  }
-}
-
-class CircularButton extends StatelessWidget {
-  final String label;
-  final Color color;
-
-  CircularButton({required this.label, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: color,
-          child: Text(label[0], style: TextStyle(color: Colors.white, fontSize: 20)),
-        ),
-        SizedBox(height: 5),
-        Text(label),
-      ],
-    );
-  }
-}
