@@ -27,7 +27,6 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget{
                       shape: MaterialStateProperty.all<CircleBorder>(
                         CircleBorder(),
                       ),
-
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.redAccent),
                       foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                       padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(14.0)),
