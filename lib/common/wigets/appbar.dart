@@ -1,4 +1,5 @@
 import 'package:app/utils/constants/size.dart';
+import 'package:app/utils/helpers/helper.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/constants/colors.dart';
@@ -11,7 +12,7 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return
       PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight),
+        preferredSize: Size.fromHeight(THelperFunction.getAppBarHeight()),
         child: AppBar(
           backgroundColor: TColors.primary,
           title: Row(
