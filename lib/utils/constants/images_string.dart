@@ -12,6 +12,8 @@ class Timages{
   static const String onBoardScreen1 = "assets/images/onboard1.gif";
   static const String onBoardScreen2 = "assets/images/onboard2.gif";
   static const String onBoardScreen3 = "assets/images/onboard3.gif";
-  static const String onBoardScreen4 = "assets/images/onboard4.gif";
+
+  //Functions logos
+  static const String food = "assets/logos/dinner.png";
 
 }
