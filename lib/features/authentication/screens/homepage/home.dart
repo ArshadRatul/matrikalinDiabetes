@@ -1,6 +1,8 @@
 import 'package:app/features/authentication/screens/homepage/circleButton.dart';
+import 'package:app/utils/constants/images_string.dart';
 import 'package:app/utils/helpers/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/wigets/appbar.dart';
 import '../../../../utils/constants/colors.dart';
@@ -37,48 +39,71 @@ class HomePage extends StatelessWidget {
           Center(
             child: Container(
               width: THelperFunction.getScreenWidth()*0.9,
-              height: THelperFunction.getScreenHeight()*0.35,
+              height: THelperFunction.getScreenHeight()*0.36,
               decoration: BoxDecoration(
                 color: TColors.primary,
                 borderRadius: BorderRadius.circular(40), // Adjust the border radius as needed
               ),
-              child: Center(
-                child: Text(
-                  'Rounded Rectangle',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
+              child: Column(
+
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("দৈনিক করণীয় এবং রিমাইন্ডার",maxLines: 2, style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ) , textAlign: TextAlign.center,),
+                      IconButton(onPressed: (){}, icon: Icon(Iconsax.notification, size: 36,),)
+                    ],
                   ),
-                ),
-              ),
+                  Container(
+                    width: THelperFunction.getScreenHeight()*0.36*0.98,
+                    height: THelperFunction.getScreenWidth()*0.9*0.6,
+                    child: ListView(
+                      children: [
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhsdsadbshjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagbhdbasddasdhjkabdg"),
+                        Text("sdagbhdbshjkabdg"),
+                        Text("sdagsdadbhdbshjkabdg"),
+                        Text("gggggggggggggggg"),
+                      ],
+                    ),
+                  ),
+                ],
+              )
             ),
           ),
-          SizedBox(height: TSize.spaceBtwSections,),
+          SizedBox(height: TSize.spaceBtwItems,),
           ///Part 3
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children:
-            [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          
+          Container(
+              height: THelperFunction.getScreenHeight()*0.3,
+              width: THelperFunction.getScreenWidth()*0.9,
+              child: GridView.count(crossAxisCount: 4, mainAxisSpacing: 15,
                 children: [
-                  CircularButton(val: 'দৈনিক খাবার তথ্য'),
-                  CircularButton(val: 'দুগ্ধ পান তথ্য'),
-                  CircularButton(val: 'রক্তের শর্করার তথ্য'),
-                  CircularButton(val: 'চ্যাট ফোরাম'),
+                  CircularButton(val: 'দৈনিক খাবার তথ্য',logoname: "",function: "s",),
+                  CircularButton(val: 'দুগ্ধ পান তথ্য',logoname: Timages.food,function: "s",),
+                  CircularButton(val: 'রক্তের শর্করার তথ্য',logoname: Timages.food,function: "s",),
+                  CircularButton(val: 'চ্যাট ফোরাম',logoname: Timages.food,function: "s",),
+                  CircularButton(val: 'দৈনন্দিন কাজকর্ম',logoname: Timages.food,function: "s",),
+                  CircularButton(val: 'বিনোদন',logoname: Timages.food,function: "s",),
+                  CircularButton(val: 'জিডিএম এবং গর্ভাবস্থার তথ্য',logoname: Timages.food,function: "s",),
+                  CircularButton(val: 'প্রয়োজনীয় উপদেশ',logoname: Timages.food,function: "s",),
                 ],
-              ),
-              SizedBox(height: TSize.sm,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CircularButton(val: 'দৈনন্দিন কাজকর্ম'),
-                  CircularButton(val: 'বিনোদন'),
-                  CircularButton(val: 'জিডিএম এবং গর্ভাবস্থার তথ্য'),
-                  CircularButton(val: 'প্রয়োজনীয় উপদেশ'),
-                ],
-              ),
-            ],
+              )
           )
 
 

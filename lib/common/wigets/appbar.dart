@@ -15,8 +15,10 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget{
         preferredSize: Size.fromHeight(THelperFunction.getAppBarHeight()),
         child: AppBar(
           backgroundColor: TColors.primary,
-          title: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          title:
+          Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
 
             children: [
               ///The SOS button
@@ -35,7 +37,7 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget{
                     child: Text("SOS")),
               ),
 
-              Text('মাতৃকালীন ডায়াবেটিস'),
+              Text('মাতৃকালীন ডায়াবেটিস', textAlign: TextAlign.center,),
             ],
           ),
           actions: [
