@@ -13,7 +13,7 @@ class TTexts{
   static const String homeAppbarSubTitle = "Your name";
 
   //Login
-  static const String loginText =  "Welcome to Matrikalin Diabetes App ";
-  static const String loginTextSubtitle =  "Login to get started";
+  static const String loginText =  "ম্যাট্রিকালিন ডায়াবেটিস অ্যাপে স্বাগতম ";
+  static const String loginTextSubtitle =  "শুরু করতে লগইন করুন";
 
 }

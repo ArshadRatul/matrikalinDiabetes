@@ -17,7 +17,7 @@ class _SignupPageState extends State<SignupPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Signup Page'),
+        title: Text('নিবন্ধন করুন'),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -31,14 +31,14 @@ class _SignupPageState extends State<SignupPage> {
                 TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
-                    labelText: 'Email',
+                    labelText: 'ইমেইল',
                   ),
                   keyboardType: TextInputType.emailAddress,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter your email';
+                      return 'অনুগ্রহ করে অপনের ইমেইল দিন';
                     } else if (!value.contains('@')) {
-                      return 'Please enter a valid email';
+                      return 'একটি বৈধ ইমেইল প্রবেশ করুন';
                     }
                     return null;
                   },
@@ -47,12 +47,12 @@ class _SignupPageState extends State<SignupPage> {
                 TextFormField(
                   controller: _mobileController,
                   decoration: InputDecoration(
-                    labelText: 'Mobile Number',
+                    labelText: 'মোবাইল নম্বর',
                   ),
                   keyboardType: TextInputType.phone,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter your mobile number';
+                      return 'অনুগ্রহ করে অপনের মোবাইল নম্বর দিন';
                     }
                     return null;
                   },
@@ -61,14 +61,14 @@ class _SignupPageState extends State<SignupPage> {
                 TextFormField(
                   controller: _passwordController,
                   decoration: InputDecoration(
-                    labelText: 'Password',
+                    labelText: 'পাসওয়ার্ড',
                   ),
                   obscureText: true,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter your password';
+                      return 'অনুগ্রহ করে আপনার পাসওয়ার্ড দিন';
                     } else if (value.length < 6) {
-                      return 'Password must be at least 6 characters long';
+                      return 'পাসওয়ার্ড অন্তত ৬ অক্ষর দীর্ঘ হতে হবে';
                     }
                     return null;
                   },
@@ -77,14 +77,14 @@ class _SignupPageState extends State<SignupPage> {
                 TextFormField(
                   controller: _confirmPasswordController,
                   decoration: InputDecoration(
-                    labelText: 'Confirm Password',
+                    labelText: 'পাসওয়ার্ড নিশ্চিত করুন',
                   ),
                   obscureText: true,
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please confirm your password';
+                      return 'আপনার পাসওয়ার্ড নিশ্চিত করুন';
                     } else if (value != _passwordController.text) {
-                      return 'Passwords do not match';
+                      return 'পাসওয়ার্ড মিলছে না';
                     }
                     return null;
                   },
@@ -106,10 +106,10 @@ class _SignupPageState extends State<SignupPage> {
                       String confirmPassword = _confirmPasswordController.text;
                       // Simulate signup process
                       _errorMessage = null; // Clear previous error message
-                      print('Signup successful');
+                      print('নিবন্ধন সফল');
                     }
                   },
-                  child: Text('Signup'),
+                  child: Text('নিবন্ধন'),
                 ),
               ],
             ),
