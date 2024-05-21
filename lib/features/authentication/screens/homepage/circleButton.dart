@@ -1,3 +1,4 @@
+import 'package:app/features/authentication/screens/foodIntake/foodIntake.dart';
 import 'package:app/utils/constants/colors.dart';
 import 'package:app/utils/helpers/helper.dart';
 import 'package:flutter/material.dart';
@@ -5,11 +6,12 @@ import 'package:flutter/material.dart';
 import '../../../../utils/constants/images_string.dart';
 import '../signup/signup.dart';
 
+
 class CircularButton extends StatelessWidget {
   final String val;
-  final String logoname;
-  final String function;
-  const CircularButton({required this.val, required this.logoname, required this.function});
+  final IconData logoname;
+  final Widget destination;
+  const CircularButton({required this.val, required this.logoname, required this.destination, });
 
   @override
   Widget build(BuildContext context) {
@@ -38,13 +40,15 @@ class CircularButton extends StatelessWidget {
             ),
             child: IconButton(
               icon: Icon(
-                Icons.restaurant,
+                logoname,
                 color: Colors.black,
                 size: THelperFunction.getScreenWidth()*0.1,
               ),
               onPressed: () {
-                // Handle button press
-                print('IconButton pressed');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => destination)
+                );
               },
             ),
           ),

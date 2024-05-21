@@ -49,20 +49,20 @@ class LoginScreen extends StatelessWidget {
                      TextFormField(
                       decoration: const InputDecoration(
                         prefixIcon: Icon(Icons.email_rounded),
-                        hintText: 'Enter your email?',
-                        labelText: 'Email',
+                        hintText: 'অপনের ইমেইল দিন',
+                        labelText: 'ইমেইল',
                       ),
                     ),
                     TextFormField(
                       decoration: InputDecoration(
                         prefixIcon: Icon(Iconsax.password_check4),
-                        labelText: 'Enter your password',
+                        labelText: 'আপনার পাসওয়ার্ড লিখুন',
                         suffixIcon: Icon(Iconsax.eye_slash)
                       ),
                       obscureText: true, // Hide the text entered
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your password';
+                          return 'অনুগ্রহ করে আপনার পাসওয়ার্ড দিন';
                         }
                         return null;
                       },
@@ -76,8 +76,8 @@ class LoginScreen extends StatelessWidget {
                     Row(
                       children: [
                         Checkbox(value: true, onChanged: (value){}), ///Remember me checkbox
-                        Text("Remember me"),
-                        TextButton(onPressed: (){}, child: Text("Forget password")), ///Forget password button
+                        Text("আমাকে মনে রেখ"),
+                        TextButton(onPressed: (){}, child: Text("পাসওয়ার্ড ভুলে গেছেন")), ///Forget password button
 
                       ],
                     ),
@@ -93,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                               MaterialPageRoute(builder: (context) =>HomePage())
                               );
 
-                        }, child: Text("Login")),
+                        }, child: Text("লগ ইন ")),
 
                         SizedBox(width: TSize.spaceBtwItems),
 
@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                               context,
                               MaterialPageRoute(builder: (context) => SignupPage())
                           );
-                        }, child: Text("Signup")),
+                        }, child: Text("নিবন্ধন করুন")),
                       ],
                     ),
 
