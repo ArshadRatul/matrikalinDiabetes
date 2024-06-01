@@ -14,6 +14,7 @@ class Appbar extends StatelessWidget implements PreferredSizeWidget{
       PreferredSize(
         preferredSize: Size.fromHeight(THelperFunction.getAppBarHeight()),
         child: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: TColors.primary,
           title:
           Row(

@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            ///Part 1
+            ///Part 1 Four circles representing the data from BGL, medicine, waterintake and calorie intake.
             Padding(
               padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
               child: Row(
@@ -89,7 +89,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: TSize.spaceBtwItems,),
-            ///Part 3
+
+
+            ///Part 3 For feature buttons
             
             Container(
                 height: THelperFunction.getScreenHeight()*0.3,
