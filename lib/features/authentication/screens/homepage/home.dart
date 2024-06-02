@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
         
             ///Part 2
             Center(
+              /// The square box where the reminder and suggestions are shown
               child: Container(
                 width: THelperFunction.getScreenWidth()*0.9,
                 height: THelperFunction.getScreenHeight()*0.36,
@@ -49,16 +50,22 @@ class HomePage extends StatelessWidget {
                 child: Column(
         
                   children: [
+                    /// The heading
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("দৈনিক করণীয় এবং রিমাইন্ডার",maxLines: 2, style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold
-                        ) , textAlign: TextAlign.center,),
+                        ),
+                          textAlign: TextAlign.center,),
+
+                        /// Reminder Button
                         IconButton(onPressed: (){}, icon: Icon(Icons.notification_add,color: Colors.black, size: THelperFunction.getScreenWidth()*0.1,),)
                       ],
                     ),
+
+                    ///The list of suggestions and reminder
                     Container(
                       width: THelperFunction.getScreenHeight()*0.36*0.98,
                       height: THelperFunction.getScreenWidth()*0.9*0.6,
