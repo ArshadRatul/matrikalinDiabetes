@@ -27,8 +27,8 @@ class CircleData extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  Text(value1, textAlign: TextAlign.center, style: TextStyle(fontSize: 20),),
-                  Text(value2, textAlign: TextAlign.center, style: TextStyle(fontSize: 10),)],
+                  Text(value1, textAlign: TextAlign.center, style: TextStyle(fontSize: 20),), ///value collected from the features
+                  Text(value2, textAlign: TextAlign.center, style: TextStyle(fontSize: 10),)], ///Unit of the value
                   )
 
           ),
