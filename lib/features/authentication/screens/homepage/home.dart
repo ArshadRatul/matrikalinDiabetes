@@ -1,4 +1,5 @@
 import 'package:app/features/authentication/screens/foodIntake/foodIntake.dart';
+import 'package:app/features/authentication/screens/physicalActivity/physicalActivity.dart';
 import 'package:app/features/authentication/screens/homepage/circleButton.dart';
 import 'package:app/utils/constants/images_string.dart';
 import 'package:app/utils/helpers/helper.dart';
@@ -8,6 +9,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../common/wigets/appbar.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/size.dart';
+import '../physicalActivity/physicalActivity.dart';
 import 'circleData.dart';
 
 ///The body is divided into three parts the part 1,2 and 3. where part 1 contains only the informations,
@@ -109,7 +111,7 @@ class HomePage extends StatelessWidget {
                     CircularButton(val: 'দুগ্ধ পান তথ্য',logoname: Icons.child_care,destination: FoodIntake(),),
                     CircularButton(val: 'রক্তের শর্করার তথ্য',logoname: Icons.bloodtype,destination: FoodIntake(),),
                     CircularButton(val: 'চ্যাট ফোরাম',logoname: Icons.chat,destination: FoodIntake(),),
-                    CircularButton(val: 'দৈনন্দিন কাজকর্ম',logoname: Icons.directions_run,destination: FoodIntake(),),
+                    CircularButton(val: 'দৈনন্দিন কাজকর্ম',logoname: Icons.directions_run,destination: PhysicalActivity(),),
                     CircularButton(val: 'বিনোদন',logoname: Icons.videogame_asset,destination: FoodIntake(),),
                     CircularButton(val: 'জিডিএম এবং গর্ভাবস্থার তথ্য',logoname: Icons.auto_stories,destination: FoodIntake(),),
                     CircularButton(val: 'প্রয়োজনীয় উপদেশ',logoname: Icons.tips_and_updates,destination: FoodIntake(),),
