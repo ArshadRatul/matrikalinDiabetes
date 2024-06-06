@@ -15,16 +15,15 @@ class _CalorieIntakeState extends State<CalorieIntake> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: Appbar(),
-        body:
-        SingleChildScrollView(
-            child: Column(
-                children: [
-                  ///The back button and the feature name
-                  BackAndFeature(FeatureName: "খাদ্য তথ্য",),
-                ]
+        body: SingleChildScrollView(
+            child: Column(children: [
+          ///The back button and the feature name
+          BackAndFeature(
+            FeatureName: "খাদ্য তথ্য",
+          ),
+        ]
             )
         )
     );
   }
 }
-
