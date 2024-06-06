@@ -1,5 +1,7 @@
+import 'package:app/features/authentication/screens/foodIntake/calorieIntake/calorieIntake.dart';
 import 'package:app/features/authentication/screens/foodIntake/suggestionbox.dart';
 import 'package:app/features/authentication/screens/foodIntake/waterGlass.dart';
+import 'package:app/features/authentication/screens/foodIntake/waterIntake/waterIntake.dart';
 import 'package:app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -76,7 +78,7 @@ class _FoodIntakeState extends State<FoodIntake> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.3,
                     width: MediaQuery.of(context).size.width * 0.4,
-                    child: AnimatedGlass(fillPercentage: 0.20), // Set your fill percentage here
+                    child: AnimatedGlass(fillPercentage: 0.60), // Set your fill percentage here
                   ),
                 ],
               ),
@@ -92,7 +94,12 @@ class _FoodIntakeState extends State<FoodIntake> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton( // Alternatively use TextButton for no elevation
-                    onPressed: () => print('Button Pressed!'),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => CalorieIntake())
+                      );
+                    },
                     child: Text("খাদ্য তথ্য দিন ",),
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.black,
@@ -107,7 +114,12 @@ class _FoodIntakeState extends State<FoodIntake> {
 
 
                   ElevatedButton( // Alternatively use TextButton for no elevation
-                    onPressed: () => print('Button Pressed!'),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => WaterIntake())
+                      );
+                    },
                     child: Text("পানি পানের তথ্য দিন ",),
                     style: ElevatedButton.styleFrom(
                       foregroundColor: Colors.black,
