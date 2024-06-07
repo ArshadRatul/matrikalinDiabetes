@@ -1,6 +1,9 @@
 import 'package:app/utils/constants/colors.dart';
+import 'package:app/utils/constants/size.dart';
 import 'package:app/utils/helpers/helper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/material/icons.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../../common/wigets/appbar.dart';
 import '../../../../../common/wigets/backButtonAndFeatureName.dart';
@@ -14,13 +17,13 @@ class WaterIntake extends StatefulWidget {
 
 class _WaterIntakeState extends State<WaterIntake> {
   List<Map<String, dynamic>> data = [
-    {'সময় ': 1, 'name': 'John Doe'},
-    {'সময় ': 2, 'name': 'Jane Smith'},
-    {'সময় ': 3, 'name': 'Mike Johnson'},
-    {'সময় ': 4, 'name': 'Sarah Brown'},
-    {'সময় ': 5, 'name': 'Chris Lee'},
-    {'সময় ': 6, 'name': 'Patricia Miller'},
-    {'সময় ': 7, 'name': 'James Wilson'},
+    {'সময় ': 1, 'name': '১/২'},
+    {'সময় ': 2, 'name': '১'},
+    {'সময় ': 3, 'name': '১'},
+    {'সময় ': 4, 'name': '২'},
+    {'সময় ': 5, 'name': '২'},
+    {'সময় ': 6, 'name': '২'},
+    {'সময় ': 7, 'name': '২'},
   ];
   void _deleteRow(int id) {
     setState(() {
@@ -39,17 +42,23 @@ class _WaterIntakeState extends State<WaterIntake> {
               ///The back button and the feature name
               BackAndFeature(FeatureName: "পানি পানের তথ্য",),
 
-                ///Table
+                ///Table showing how much water was intake
 
                 centerTable(),
 
-                ///Buttons
-                Column(
-                  children: [
+                SizedBox(height: TSize.spaceBtwSections,),
 
+                ///Buttons to input water intake
+                Text("আপনি কত গ্লাস পানি খেয়েছেন ?", style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    IconButton(onPressed: () { }, icon: Icon(Icons.science_outlined, size: THelperFunction.getScreenWidth()*0.25),),
+                    IconButton(onPressed: () { }, icon: Icon(Icons.science_outlined, size: THelperFunction.getScreenWidth()*0.25)),
+                    IconButton(onPressed: () { }, icon: Icon(Icons.science_outlined, size: THelperFunction.getScreenWidth()*0.25)),
 
                   ],
-                )
+                ),
               ]
             )
         )
@@ -61,7 +70,7 @@ class _WaterIntakeState extends State<WaterIntake> {
                 child: Container(
 
                   color: TColors.primary,
-                  height: THelperFunction.getScreenHeight() * 0.5,
+                  height: THelperFunction.getScreenHeight() * 0.55,
                   width: THelperFunction.getScreenWidth() * 0.9,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
@@ -77,6 +86,8 @@ class _WaterIntakeState extends State<WaterIntake> {
                           children: [
                             Container(
                               color: TColors.secondary,
+                              alignment: Alignment.center,
+                              height: THelperFunction.getScreenHeight()*0.08,
                               child: TableCell(
                                   child: Padding(
                                       padding: EdgeInsets.all(8.0),
@@ -85,6 +96,8 @@ class _WaterIntakeState extends State<WaterIntake> {
                             ),
                             Container(
                               color: TColors.secondary,
+                              alignment: Alignment.center,
+                              height: THelperFunction.getScreenHeight()*0.08,
                               child: TableCell(
                                   child: Padding(
                                       padding: EdgeInsets.all(8.0),
@@ -93,6 +106,8 @@ class _WaterIntakeState extends State<WaterIntake> {
                             ),
                             Container(
                               color: TColors.secondary,
+                              alignment: Alignment.center,
+                              height: THelperFunction.getScreenHeight()*0.08,
                               child: TableCell(
                                   child: Padding(
                                       padding: EdgeInsets.all(8.0),
@@ -107,11 +122,11 @@ class _WaterIntakeState extends State<WaterIntake> {
                               TableCell(
                                   child: Padding(
                                       padding: EdgeInsets.all(8.0),
-                                      child: Text(row['সময় '].toString()))),
+                                      child: Text(row['সময় '].toString(),textAlign: TextAlign.center,))),
                               TableCell(
                                   child: Padding(
                                       padding: EdgeInsets.all(8.0),
-                                      child: Text(row['name']))),
+                                      child: Text(row['name'],textAlign: TextAlign.center,))),
                               TableCell(
                                 child: IconButton(
                                   icon: Icon(Icons.delete),
