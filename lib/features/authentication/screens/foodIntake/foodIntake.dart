@@ -80,8 +80,8 @@ class _FoodIntakeState extends State<FoodIntake> {
                       "আজকের ক্যালরি গ্রহণ",
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.3,
-                      width: MediaQuery.of(context).size.width * 0.6,
+                      height: THelperFunction.getScreenHeight() * 0.3,
+                      width: THelperFunction.getScreenWidth() * 0.6,
                       child: DailyDataChart(),
                     ),
                   ],
@@ -89,8 +89,8 @@ class _FoodIntakeState extends State<FoodIntake> {
 
                 ///Glass
                 SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.3,
-                  width: MediaQuery.of(context).size.width * 0.4,
+                  height: THelperFunction.getScreenHeight() * 0.3,
+                  width: THelperFunction.getScreenWidth() * 0.4,
                   child: AnimatedGlass(
                       fillPercentage: 0.60), // Set your fill percentage here
                 ),

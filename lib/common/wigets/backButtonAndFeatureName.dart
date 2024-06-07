@@ -9,12 +9,16 @@ class BackAndFeature extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
 
         IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context),
           ),
+
+        SizedBox(width: TSize.spaceBtwItems,),
 
         Padding(
             padding: EdgeInsets.all(15),
